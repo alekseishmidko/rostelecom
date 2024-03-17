@@ -2,20 +2,22 @@ import { closeQuickViewModal } from '@/context/modals'
 import { formatPrice, removeOverflowHiddenFromBody } from '@/lib/utils/common'
 import styles from '@/styles/quick-view-modal/index.module.scss'
 import QuickViewModalSlider from './QuickViewModalSlider'
-import { useCartAction } from '@/hooks/useCartAction'
+
 import { useProductImages } from '@/hooks/useProductImages'
 import ProductAvailable from '@/components/elements/ProductAvailable/ProductAvailable'
 import ProductColor from '../ProductsListItem/ProductColor'
 import ProductComposition from '../ProductsListItem/ProductComposition'
 import { useLang } from '@/hooks/useLang'
 import ProductSizeTableBtn from '../ProductsListItem/ProductSizeTableBtn'
-import ProductSizesItem from '../ProductsListItem/ProductSizesItem'
+
 import ProductCounter from '../ProductsListItem/ProductCounter'
 import AddToCartBtn from '../ProductsListItem/AddToCartBtn'
 import Link from 'next/link'
 import stylesForProduct from '@/styles/product-list-item/index.module.scss'
 import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn'
 import { ICartItem } from '@/types/cart'
+import { useCartAction } from '@/hooks/useCartActions'
+import ProductSizesItem from '../ProductsListItem/ProductSizesItem'
 
 const QuickViewModal = () => {
   const { lang, translations } = useLang()
